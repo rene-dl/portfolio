@@ -32,6 +32,16 @@
       }
     });
 
+    document.querySelectorAll("[data-i18n-href]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-href");
+      if (!dict.hasOwnProperty(key)) return;
+      var url = dict[key];
+      el.setAttribute("href", url);
+      if (el.hasAttribute("data-download")) {
+        el.setAttribute("download", url.split("/").pop());
+      }
+    });
+
     document.documentElement.setAttribute("lang", lang);
 
     langButtons.forEach(function (btn) {
