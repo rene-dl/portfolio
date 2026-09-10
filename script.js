@@ -1,6 +1,60 @@
 (function () {
   "use strict";
 
+  /* ---------- Language switch ---------- */
+  var LANG_KEY = "rd-portfolio-lang";
+  var langButtons = document.querySelectorAll("[data-lang-btn]");
+
+  function detectDefaultLang() {
+    var saved = null;
+    try {
+      saved = window.localStorage.getItem(LANG_KEY);
+    } catch (e) {
+      saved = null;
+    }
+    if (saved === "en" || saved === "es") return saved;
+    var nav = (window.navigator.language || "es").toLowerCase();
+    return nav.indexOf("es") === 0 ? "es" : "en";
+  }
+
+  function applyLang(lang) {
+    if (!window.TRANSLATIONS || !window.TRANSLATIONS[lang]) return;
+    var dict = window.TRANSLATIONS[lang];
+
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n");
+      if (!dict.hasOwnProperty(key)) return;
+      var attr = el.getAttribute("data-i18n-attr");
+      if (attr) {
+        el.setAttribute(attr, dict[key]);
+      } else {
+        el.textContent = dict[key];
+      }
+    });
+
+    document.documentElement.setAttribute("lang", lang);
+
+    langButtons.forEach(function (btn) {
+      var isActive = btn.getAttribute("data-lang-btn") === lang;
+      btn.classList.toggle("is-active", isActive);
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
+
+    try {
+      window.localStorage.setItem(LANG_KEY, lang);
+    } catch (e) {
+      /* localStorage unavailable — language just won't persist across visits */
+    }
+  }
+
+  langButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      applyLang(btn.getAttribute("data-lang-btn"));
+    });
+  });
+
+  applyLang(detectDefaultLang());
+
   /* ---------- Sticky nav border on scroll ---------- */
   var nav = document.getElementById("nav");
   function onScroll() {
