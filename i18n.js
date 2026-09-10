@@ -20,6 +20,7 @@ var TRANSLATIONS = {
     "hero.viewProjects": "Ver proyectos",
     "hero.contactMe": "Contáctame",
     "hero.downloadCv": "Descargar CV",
+    "cv.url": "assets/cv/Rene_Davila_CV_ES.pdf",
 
     "about.eyebrow": "Acerca de",
     "about.lead": "Conectando necesidades de negocio con soluciones basadas en datos y tecnología.",
@@ -131,6 +132,7 @@ var TRANSLATIONS = {
     "hero.viewProjects": "View Projects",
     "hero.contactMe": "Contact Me",
     "hero.downloadCv": "Download CV",
+    "cv.url": "assets/cv/Rene_Davila_CV_EN.pdf",
 
     "about.eyebrow": "About",
     "about.lead": "Connecting business needs with data-driven, technology-enabled solutions.",
