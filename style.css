@@ -262,7 +262,8 @@ section:first-of-type,
 .nav-mobile {
   display: none;
   flex-direction: column;
-  padding: 8px 0 24px;
+  padding-top: 8px;
+  padding-bottom: 24px;
   border-bottom: 1px solid var(--color-line);
 }
 
@@ -394,6 +395,31 @@ section:first-of-type,
   max-width: 30ch;
 }
 
+.about-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-line);
+  max-width: 30ch;
+}
+
+.about-stat-num {
+  font-size: 2.5rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.about-stat-label {
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+  line-height: 1.4;
+  max-width: 14ch;
+}
+
 .about-body p {
   color: var(--color-ink-soft);
   font-size: 1.02rem;
@@ -457,18 +483,6 @@ section:first-of-type,
 
 .project-card:hover {
   border-color: #cfcfcc;
-}
-
-.project-media {
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-  background: var(--color-bg-soft);
-}
-
-.project-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .project-body {
@@ -570,21 +584,11 @@ section:first-of-type,
   transform: translateY(16px);
   transition: transform 0.3s var(--ease);
   overflow: hidden;
+  position: relative;
 }
 
 .modal-backdrop.is-open .modal {
   transform: translateY(0);
-}
-
-.modal-media {
-  aspect-ratio: 16/9;
-  background: var(--color-bg-soft);
-}
-
-.modal-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .modal-close {
@@ -603,7 +607,7 @@ section:first-of-type,
 }
 
 .modal-body {
-  padding: 36px 40px 44px;
+  padding: 52px 56px 44px 40px;
 }
 
 .modal-cat {
@@ -732,30 +736,37 @@ section:first-of-type,
   max-width: 16ch;
 }
 
-.contact-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  margin-top: 44px;
-}
-
 .contact-list {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  margin-top: 44px;
+  max-width: 40ch;
 }
 
-.contact-list a {
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   font-size: 1.05rem;
-  padding: 10px 0;
-  color: var(--color-ink-soft);
-  transition: color 0.2s var(--ease);
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-line);
+  color: var(--color-ink);
+  transition: gap 0.2s var(--ease), color 0.2s var(--ease);
 }
 
-.contact-list a:hover {
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.contact-item svg {
+  flex-shrink: 0;
   color: var(--color-ink);
+}
+
+.contact-item:hover {
+  gap: 18px;
+  color: var(--color-accent);
 }
 
 footer {
@@ -816,7 +827,7 @@ footer {
   }
 
   .modal-body {
-    padding: 28px 22px 34px;
+    padding: 46px 44px 34px 22px;
   }
 
   section {
@@ -826,10 +837,5 @@ footer {
   #hero {
     padding-top: 56px;
     padding-bottom: 72px;
-  }
-
-  .contact-row {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
