@@ -24,6 +24,7 @@ var TRANSLATIONS = {
 
     "about.eyebrow": "Acerca de",
     "about.lead": "Conectando necesidades de negocio con soluciones basadas en datos y tecnología.",
+    "about.statLabel": "años de experiencia en Data & BI",
     "about.p1": "Soy Data Analyst / Business Intelligence con experiencia diseñando, construyendo y manteniendo ecosistemas analíticos dentro de entornos bancarios — donde los datos tienen que ser correctos y las decisiones que se toman con ellos tienen peso real.",
     "about.p2": "Mi trabajo está en la intersección entre Business Intelligence, analítica de datos, SQL y modelado de datos por un lado, y automatización y desarrollo de aplicaciones low-code por el otro. La mayor parte de mi tiempo hago tres cosas: entender qué necesita realmente un área de negocio, moldear los datos para que puedan responder a esa necesidad, y construir el dashboard, aplicación o automatización que pone esa respuesta en manos de alguien.",
     "about.p3": "Eso normalmente significa modelar un data warehouse, escribir y optimizar consultas SQL, diseñar un dashboard de Power BI que la gente realmente abre cada mañana, o construir una aplicación de Power Platform que le quita un paso manual a la semana de alguien.",
@@ -39,7 +40,7 @@ var TRANSLATIONS = {
     "projects.lede": "Cuatro proyectos que abarcan dashboards empresariales, aplicaciones de negocio y analítica comercial — cada uno construido para resolver un problema operativo específico.",
 
     "tag.dataModeling": "Modelado de Datos",
-    "project.viewCase": "Ver caso de estudio",
+    "project.viewCase": "Ver detalle",
 
     "p1.imgAlt": "Screenshot placeholder de dashboard de Business Intelligence",
     "p1.imgAlt2": "Screenshot placeholder de dashboard ejecutivo de KPIs",
@@ -105,7 +106,6 @@ var TRANSLATIONS = {
 
     "contact.eyebrow": "Contacto",
     "contact.title": "Construyamos algo con datos.",
-    "contact.lede": "Abierto a posiciones de Data Analyst, Business Intelligence Analyst y BI Consultant. La forma más rápida de contactarme es por correo.",
     "contact.downloadCv": "Descargar CV (PDF)",
 
     "footer.text": "© 2026 René Dávila. Hecho con HTML, CSS y JavaScript — alojado en GitHub Pages.",
@@ -136,6 +136,7 @@ var TRANSLATIONS = {
 
     "about.eyebrow": "About",
     "about.lead": "Connecting business needs with data-driven, technology-enabled solutions.",
+    "about.statLabel": "years of experience in Data & BI",
     "about.p1": "I'm a Data Analyst / Business Intelligence professional with experience designing, building and maintaining analytical ecosystems inside banking environments — where the data has to be right and the decisions built on it carry real weight.",
     "about.p2": "My work sits at the intersection of business intelligence, data analytics, SQL and data modeling on one side, and automation and low-code application development on the other. I spend most of my time doing three things: understanding what a business area actually needs, shaping the data so it can answer that need, and building the dashboard, application or automation that puts the answer in someone's hands.",
     "about.p3": "That usually means modeling a data warehouse, writing and tuning SQL, designing a Power BI dashboard people will actually open every morning, or building a Power Platform application that removes a manual step from someone's week.",
@@ -151,7 +152,7 @@ var TRANSLATIONS = {
     "projects.lede": "Four projects spanning enterprise dashboards, business applications and commercial analytics — each one built to solve a specific operational problem.",
 
     "tag.dataModeling": "Data Modeling",
-    "project.viewCase": "View case study",
+    "project.viewCase": "View details",
 
     "p1.imgAlt": "Business Intelligence dashboard screenshot placeholder",
     "p1.imgAlt2": "Executive KPI dashboard screenshot placeholder",
@@ -217,7 +218,6 @@ var TRANSLATIONS = {
 
     "contact.eyebrow": "Get in touch",
     "contact.title": "Let's build something with data.",
-    "contact.lede": "Open to Data Analyst, Business Intelligence Analyst and BI Consultant roles. The fastest way to reach me is email.",
     "contact.downloadCv": "Download CV (PDF)",
 
     "footer.text": "© 2026 René Dávila. Built with HTML, CSS and JavaScript — hosted on GitHub Pages.",
